@@ -1,9 +1,9 @@
-import axios from "axios";
+import axios from 'axios';
 
 export const gimmePikachu = async () => {
   try {
     const { data } = await axios.get(
-      "https://pokeapi.co/api/v2/pokemon/pikachu"
+      'https://pokeapi.co/api/v2/pokemon/pikachu'
     );
     return data;
   } catch (e) {

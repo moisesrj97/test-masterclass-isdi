@@ -1,4 +1,4 @@
-jest.mock('some-module', () => {
+/* jest.mock('some-module', () => {
   return {
     firstFn: jest.fn(),
     secondFn: jest.fn(),
@@ -19,10 +19,10 @@ describe('Given some component/function/service', () => {
     //! This will be executed before all tests
     somePartOfTheMockedModule.mockReturnedValue('mocked sync');
     somePartOfTheMockedModule.mockResolvedValue('mocked async');
-    /* somePartOfTheMockedModule.mockImplementation(() => {
+    somePartOfTheMockedModule.mockImplementation(() => {
       return "Mocked sync";
       return Promise.resolve("Mocked sync");
-    }); */
+    });
   });
   afterAll(() => {
     //! This will be executed after all tests
@@ -33,4 +33,4 @@ describe('Given some component/function/service', () => {
       expect(2 + 2).toBe(4);
     });
   });
-});
+}); */

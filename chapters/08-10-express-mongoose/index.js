@@ -2,15 +2,18 @@ import express from 'express';
 import mongoose from 'mongoose';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
+
 import { taskRouter } from './routers/task.router.js';
 import { userRouter } from './routers/user.router.js';
 
 dotenv.config();
 
-const app = express();
+export const app = express();
 
 app.use(morgan('dev'));
 app.use(express.json());
+
+export let dbConnection;
 
 mongoose
   .connect(process.env.MONGO_URI)
@@ -26,6 +29,6 @@ app.get('/', (req, res) => {
 
 const port = process.env.PORT || 3000;
 
-app.listen(port, () => {
+export const server = app.listen(port, () => {
   console.log('Server started and listening on port ' + port);
 });

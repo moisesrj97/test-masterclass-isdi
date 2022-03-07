@@ -9,7 +9,7 @@ export const getTasks = async (user) => {
 
 export const loginUser = async (user) => {
   const { data } = await axios.get(baseURL + `users?name=${user.name}`);
-  const tasksData = await getTasks(data[0]);
+  const tasksData = await getTasks(data[0] /*Esto es por json-server*/);
   return { userData: data[0], tasksData };
 };
 

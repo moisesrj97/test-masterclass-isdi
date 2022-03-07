@@ -10,7 +10,7 @@ export const useApiGet = () => {
     setLoading(true);
     setError(null);
     try {
-      const { data } = await axios(url);
+      const { data } = await axios.get(url);
       setData(data);
       setLoading(false);
     } catch (error) {

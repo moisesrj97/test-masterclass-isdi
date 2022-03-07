@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useApiGet } from './hooks/useApiGet';
 import { useState } from 'react';
